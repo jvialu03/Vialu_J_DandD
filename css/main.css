@@ -39,7 +39,37 @@ body {
 
 
 /* set up drop zones */
+.drop-zone {
+	width: 49.5%;
+	height: 49.5%;
+	border: thin dashed white;
+	float: left;
+	position: relative;
+}
 
+.tl, .bl {
+	text-align: right;
+}
+
+.tr img {
+	bottom: 0;
+}
+
+.tl img {
+	bottom: 0;
+	right: 0;
+}
+
+.bl img {
+	right: 0;
+}
+
+.drop-zone img {
+	width: auto !important;
+	padding: 0;
+	cursor: default;
+	position: absolute;
+}
 
 
 /* end board styles */
@@ -59,10 +89,10 @@ header h1 {
 	margin: 10px 0
 }
 
-header p, footer p { 
-	font-size: 1.7em; 
-	letter-spacing: 2px; 
-	margin: 10px 0 
+header p, footer p {
+	font-size: 1.7em;
+	letter-spacing: 2px;
+	margin: 10px 0
 }
 
 footer {
