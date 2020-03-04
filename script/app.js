@@ -31,6 +31,11 @@
 	}
 
 	function allowDrop(event) {
+		// 
+		if (this.children.length >= 1) {
+			return;
+		}
+
 		//event.preventDefault();
 		console.log('dropped an image');
 
