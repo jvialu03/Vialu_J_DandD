@@ -31,6 +31,11 @@
 	}
 
 	function allowDrop(event) {
+		// if a drop zone already has 1 or more puzzle piece, this function will immediately stop
+		if (this.children.length >= 1) {
+			return;
+		}
+
 		//event.preventDefault();
 		console.log('dropped an image');
 
