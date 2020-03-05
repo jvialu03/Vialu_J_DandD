@@ -2,8 +2,9 @@
 	// set up the puzzle pieces and boards
 	const puzzleButtons = document.querySelectorAll('#buttonHolder img'),
 				gameBoard = document.querySelector('.puzzle-board'),
-				puzzlePieces = document.querySelectorAll('.puzzle-pieces img')
-				dropZones = document.querySelectorAll('.drop-zone');
+				puzzlePieces = document.querySelectorAll('.puzzle-pieces img'),
+				dropZones = document.querySelectorAll('.drop-zone'),
+				zonePieces = document.querySelector('.puzzle-pieces');;
 
 	const pieceName = ["topLeft", "topRight", "bottomLeft", "bottomRight"];
 
@@ -46,11 +47,22 @@
 		event.target.appendChild(document.querySelector(`#${currentImage}`));
 	}
 
+	// resets the puzzle pieces when clicking the thumbs to change pieces
+	// when this function is called, a for loop will execute and append each child back to the parent node
+	function resetPuzzlePieces() {
+		for (let i = 0; i < puzzlePieces.length; i++) {
+			zonePieces.appendChild(puzzlePieces[i]);
+		}
+	}
+
 	// add event handling here -> how is the user going to use our app?
 	// what triggers do we need
 
-	// click on the bottom buttons to change the puzzle image we're working with
-	puzzleButtons.forEach(button => button.addEventListener('click', changeImageSet));
+	// click on the bottom buttons to change the puzzle image we're working with and to reset the drop zone
+	puzzleButtons.forEach(button => {
+		button.addEventListener('click', changeImageSet);
+		button.addEventListener('click', resetPuzzlePieces);
+	});
 
 	puzzlePieces.forEach(piece => piece.addEventListener('dragstart', allowDrag));
 
