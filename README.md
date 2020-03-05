@@ -1,5 +1,7 @@
-# Intro to Drag and Drop Event
-This is a drag and drop puzzle game. Using the DragEvent DOM, users can drag and drop the puzzle pieces into the drop zone and also switch to other pieces. 
+# Intro to Drag and Drop Event with Crushing Bugs
+This project is a drag and drop puzzle game. Using the DragEvent DOM, users can drag and drop the puzzle pieces into the drop zone and also switch to the other different pieces. 
+
+The project contained 2 game breaking bugs that had to be fixed. One is the ability to drag multiple puzzle pieces into one drop zone. The other bug is not resetting the puzzle pieces after changing to another puzzle set.
 
 ### Getting Started 
 This is a basic HTML, CSS, and JavaScript build. For further information, go to: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn) 
